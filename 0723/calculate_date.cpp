@@ -24,6 +24,9 @@ public:
 					day_ = day_ + inc - 31;
 					month_++;
 				}
+				else 
+					day_ = day_ + inc;
+					
 				break;
 			}
 
@@ -32,6 +35,9 @@ public:
 					day_ = day_ + inc - 30;
 					month_++;
 				}
+				else 
+					day_ = day_ + inc;
+				
 				break;
 			}
 			else if (month_ == 2) {
@@ -39,6 +45,9 @@ public:
 					day_ = day_ + inc - 28;
 					month_++;
 				}
+				else 
+					day_ = day_ + inc;
+					
 				break;
 			}
 		}
@@ -46,9 +55,13 @@ public:
 	void AddMonth(int inc) {
 		while (true) {
 			if (month_ + inc > 12) {
-				month_ = month_ + inc - 12;
+				 - 12;
 				year_++;
 			}
+			else 
+				month_ = month_ + inc;
+			
+
 			break;
 
 		}
